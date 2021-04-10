@@ -1,6 +1,7 @@
 import React from 'react';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+import SplitCardForm from './SplitCardForm';
 import SimpleCardForm from './SimpleCardForm';
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
@@ -10,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51Ie122BgoNPnJ9PsOBsvki1BkTcQVp6b39eTR
 const ProcessPayment = () => {
     return (
         <Elements stripe={stripePromise}>
-           <SimpleCardForm></SimpleCardForm>
+             <SimpleCardForm></SimpleCardForm>
       </Elements>
     );
 };
