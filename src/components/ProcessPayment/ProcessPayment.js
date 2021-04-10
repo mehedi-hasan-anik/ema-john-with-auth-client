@@ -8,10 +8,10 @@ import SimpleCardForm from './SimpleCardForm';
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe('pk_test_51Ie122BgoNPnJ9PsOBsvki1BkTcQVp6b39eTR7b3rvDMx3iYWAVreWIxJiXADDnILvmJPQ4Mn8YsN7HLm6H1aTcP00gLGZhD34');
 
-const ProcessPayment = () => {
+const ProcessPayment = ({handlePayment}) => {
     return (
         <Elements stripe={stripePromise}>
-             <SimpleCardForm></SimpleCardForm>
+             <SimpleCardForm handlePayment={handlePayment}></SimpleCardForm>
       </Elements>
     );
 };
